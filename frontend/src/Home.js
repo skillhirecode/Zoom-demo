@@ -17,6 +17,7 @@ function HomePage() {
       </div>
       
       
+      
       <div className="meeting-schedule">
         <h2>Upcoming events</h2>
         <ul>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './App.css'
+import './Home.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function HomePage() {
@@ -11,7 +11,7 @@ function HomePage() {
       
       
       <div className="user-profile">
-        <img src="profile-picture.jpg" alt="Profile" />
+        <img src="" alt="Profile" />
         <h2>User Name</h2>
         <p>Email: user@example.com</p>
         <Link to="/edit-profile">Edit Profile</Link>

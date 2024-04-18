@@ -1,20 +1,43 @@
-import React, { useEffect } from 'react';
-import './'; // Assuming you have a CSS file for styling
+import React from 'react';
+import './Landing.css';
 
-const LandingPage = () => {
-  useEffect(() => {
-    const slogan = document.querySelector('.slogan');
-    slogan.classList.add('zoomIn');
-  }, []);
+const Landing = () => {
+    return (
+        <>
+            <nav>
+                <input type="checkbox" id="nav-toggle" />
+                {/* <div className="logo">MINZ<strong>CODE</strong></div> */}
+                <ul className="links">
+                    {/* <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li> */}
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Book appointment</a></li>
+                </ul>
+                <label htmlFor="nav-toggle" className="icon-burger">
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                </label>
+                {/* <div class="header_logo">
+              <a class="logo" href="#"><img class="logo-img" src="images/logogif (1).gif"></a>
+          </div> */}
+            </nav>
+            <div className="animation-container">
+                <h1 className="animation-text">Welcome to SkillZoom</h1>
+            </div>
 
-  return (
-    <div className="landing">
-      <header className="header">
-        <h2 className="slogan" style={{ color: 'blue' }}>Welcome to Zoom</h2>
-        <button className="btn">Book a Consultation</button>
-      </header>
-    </div>
-  );
+            {/* <div className="container">
+                <img src="https://picsum.photos/id/559/1000/1000.jpg" alt="" />
+                <img src="https://picsum.photos/id/558/1000/1000.jpg" alt="" />
+            </div> */}
+            {/* <label htmlFor="nav-toggle" className="icon-burger">
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+            </label> */}
+        </>
+    );
 };
 
-export default LandingPage;
+export default Landing;

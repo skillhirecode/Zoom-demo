@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 
-body {
+ body {
   margin: 0;
   font-family: Roboto, -apple-system, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-  background-image: linear-gradient(to right, rgb(245, 101, 101), rgb(99, 99, 245));
-}
+   /* background-image: linear-gradient(to right, rgb(245, 101, 101), rgb(99, 99, 245)); */
+}  
 
 .forms-section {
   display: flex;

@@ -4,6 +4,10 @@ import Login from "./Login";
 import HomePage from "./Home";
 import Signup from "./Signup";
 import Landing from "./Landing";
+import Videocall from "./Videocall";
+import Dashboard from "./Dashboard";
+import Booking from "./Booking";
+
 
 
 function App() {
@@ -22,6 +26,15 @@ function App() {
           </Routes>
           <Routes>
             <Route path="/landing" element={<Landing/>} />
+          </Routes>
+            <Routes>
+            <Route path="/videocall" element={<Videocall/>} />
+          </Routes>  
+          <Routes>
+            <Route path="/dashboard" element={<Dashboard/>} />
+          </Routes>
+          <Routes>
+            <Route path="/booking" element={<Booking/>} />
           </Routes>
           
         </Router>

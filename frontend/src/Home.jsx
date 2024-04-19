@@ -1,76 +1,55 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import './Home.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVideo } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
+import './Home.css';
 
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-function HomePage() {
+function Home() {
   return (
-    
-    <div className="home-page">
-      <h1>Welcome to Skill Zoom</h1>
-      
-      
-      {/* <div className="user-profile">
-        <img src="" alt="Profile" />
-        <h2>Username</h2>
-        <p>Email: user@example.com</p>
-        <Link to="/edit-profile">Edit Profile</Link>
-      </div> */}
-
-      
-      {/* <div className="box-container">
-      <div className="meeting-schedule-box">
-         <h2>Upcoming events</h2>
-        <ul>
-          <li>Meeting 1 - Date/Time</li>
-          <li>Meeting 2 - Date/Time</li>
-          
-        </ul> 
-      </div>
-      </div> */}
-      
-      <div className="box-container">
-      <div className="create-join-meeting-box">
-        <h1>Create Meeting</h1>
-         <Link to="/create-meeting">Create Meeting</Link>
-         <FontAwesomeIcon icon={faVideo} />
-
-        <Link to="/join-meeting">Join Meeting</Link> 
-      </div>
-      </div>
-      
-<div className="box-container">
-      <div className="meeting-history-box">
-        <h2>Meeting History</h2>
-        <ul>
-          <li>Past Meeting 1 - Date/Time</li>
-          <li>Past Meeting 2 - Date/Time</li>
-          
-        </ul>
-      </div>
-      </div>
-      
-      
-      <div className="chat">
-        <h2>Chat</h2>
+    <section className="container"  style={{backgroundImage: 'url("/images/Meetingimg.jpg")', backgroundSize:'cover', width:'200%'}}>
+      <section className="card__container">
         
-      </div>
-      
-      
-      <div className="settings">
-        <Link to="/settings">Settings</Link>
-      </div>
-      
-      <div className="help-support">
-        <Link to="/help">Help & Support</Link>
-      </div>
-    </div>
+        <div className="card__bx card__1">
+          <div className="card__data">
+            <div className="card__icon">
+              <div className="card__icon-bx">
+                <i className="fa-solid fa-pen-ruler"></i>
+              </div>
+            </div>
+            <div className="card__content">
+              <h3>Create meeting</h3>
+              {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> */}
+              <a href="#">Create</a>
+            </div>
+          </div>
+        </div>
+        {/* Development Card */}
+        <div className="card__bx card__2">
+          <div className="card__data">
+            <div className="card__icon">
+              <div className="card__icon-bx"><i className="fa-solid fa-code"></i></div>
+            </div>
+            <div className="card__content">
+              <h3>Join meeting</h3>
+              {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> */}
+              <a href="#">Join</a>
+            </div>
+          </div>
+        </div>
+        {/* Launch Card */}
+        <div className="card__bx card__3">
+          <div className="card__data">
+            <div className="card__icon">
+              <div className="card__icon-bx"><i className="fa-solid fa-rocket"></i></div>
+            </div>
+            <div className="card__content">
+              <h3>Meeting history</h3>
+              {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> */}
+              {/* <a href="#"></a> */}
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
   );
 }
 
-export default HomePage;
- 
+export default Home;

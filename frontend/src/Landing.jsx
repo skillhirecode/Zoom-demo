@@ -6,7 +6,10 @@ const Landing = () => {
         <>
             <nav>
                 <input type="checkbox" id="nav-toggle" />
-                {/* <div className="logo">MINZ<strong>CODE</strong></div> */}
+                {/* <div className="header_logo">
+                    <a className="logo" href="#"><img className="logo-img" src="/images/logogif (1).gif" alt=""/></a>
+                </div>
+                 */}
                 <ul className="links">
                     {/* <li><a href="#"></a></li>
                     <li><a href="#"></a></li>

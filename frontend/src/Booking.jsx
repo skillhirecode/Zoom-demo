@@ -148,12 +148,12 @@ const Booking = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., send data to server)
+   
     console.log('Form submitted:', formData);
   };
 
   return (
-    <div className="appointment-form">
+    <div className="appointment-form" style={{ backgroundImage: "url('/images/Bookingimg.jpg')", backgroundSize:'cover', backgroundPosition:'center' }}>
       <h2>Book an Appointment</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>

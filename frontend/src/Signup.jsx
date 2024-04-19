@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Signup.css'; // Import your CSS file
+import './Signup.css'; 
 
-class SignUpForm extends Component {
+class Signup extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,12 +19,12 @@ class SignUpForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        // Add your form submission logic here
+        
     }
 
     render() {
         return (
-            <div className="wrapper">
+            <div className="wrapper" style={{ backgroundImage: "url('/images/Signupimg.jpg')", backgroundSize:'cover', backgroundPosition:'center', height:'600px'}} >
                 <form onSubmit={this.handleSubmit}>
                     <h1>Sign up</h1>
                     <div className="input">
@@ -68,7 +68,8 @@ class SignUpForm extends Component {
                         />
                     </div>
                     <button type="submit" className="light">Sign Up</button>
-                    <p> Already have an account?
+                    <p style={{ marginTop: '10px' }}> 
+
                         <a href="#">Login</a>
                     </p>
                 </form>
@@ -77,4 +78,4 @@ class SignUpForm extends Component {
     }
 }
 
-export default SignUpForm;
+export default Signup;

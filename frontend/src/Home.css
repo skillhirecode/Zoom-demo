@@ -1,59 +1,180 @@
-/* Home.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 
-.home-page {
+:root {
+
+    --text-color: #000000;
+    --bg-color: #282828;
+
+    
+    --body-font: 'Poppins', sans-serif;
+    --normal-font-size: .938rem;
+
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --normal-font-size: 1rem;
+    }
+}
+
+
+*,
+*:after,
+*:before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--normal-font-size);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-weight: 400;
+    font-family: var(--body-font);
+    transition: all 0.2s ease;
+}
+
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+.card__container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1140px;
+  margin: 40px auto;
 }
+.card__bx {
+    --bg-clr: #282828;
+    --txt-clr: #ffffff;
+    --btn-txt-clr: #333333;
+    --transition: all 0.5s;
 
-.box-container {
-  display: flex;
-  justify-content: space-around; 
-  margin-top: 20px;
-  padding: 20px;
-  width: 80%;
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  
+    font-family: 'Poppins', sans-serif;
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    border-top-left-radius: 70px;
+    position: relative;
+    overflow: hidden;
+    background: var(--clr);
+    transition: var(--transition);
 }
-
-
-.box-container h2 {
-  margin-bottom: 10px;
-  text-align: center; 
+.card__1 {
+    --clr: #249eff;
 }
-
-.user-profile {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card__2 {
+    --clr: #ff1f6b;
 }
-
-.user-profile img {
-  width: 100px; /* Adjust size as needed */
-  height: 100px; /* Adjust size as needed */
-  border-radius: 50%; /* Makes the image circular */
-  margin-bottom: 10px;
+.card__3 {
+    --clr: #98ff21;
 }
-
-.user-profile h2 {
-  margin-bottom: 5px;
+.card__bx .card__data {
+    position: absolute;
+    inset: 10px;
+    border-radius: 10px;
+    background: var(--bg-clr);
 }
-
-.user-profile p {
-  margin-bottom: 10px;
+.card__bx .card__data .card__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 50%;
+    height: 140px;
+    width: 140px;
+    background: var(--clr);
 }
-
-.chat,
-.settings,
-.help-support {
-  margin-top: 20px;
+.card__bx .card__data .card__icon::before {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border-top-left-radius: 30px;
+    background: transparent;
+    box-shadow: -5px -5px 0 5px var(--clr);
 }
-
-.create-join-meeting a {
-  margin-right: 10px;
+.card__bx .card__data .card__icon::after {
+    content: '';
+    position: absolute;
+    right: -30px;
+    top: 0;
+    height: 30px;
+    width: 30px;
+    border-top-left-radius: 30px;
+    background: transparent;
+    box-shadow: -5px -5px 0 5px var(--clr);
+}
+.card__bx .card__data .card__icon .card__icon-bx {
+    position: absolute;
+    inset: 10px;
+    border-radius: 10px;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    background: var(--bg-clr);
+    color: var(--clr);
+}
+.card__bx:hover .card__data .card__icon .card__icon-bx {
+    background: var(--clr);
+    color: var(--txt-clr);
+    transition: var(--transition);
+}
+.card__bx .card__data .card__content {
+    position: absolute;
+    top: 150px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--txt-clr);
+}
+.card__bx .card__data .card__content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.card__bx .card__data .card__content p {
+    font-size: 14px;
+    opacity: 0.75;
+}
+.card__bx .card__data .card__content a {
+    display: inline-flex;
+    align-self: center;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    border: 2px solid var(--clr);
+    color: var(--btn-txt-clr);
+    background: var(--clr);
+    transition: var(--transition);
+}
+.card__bx .card__data .card__content a:hover {
+    background: transparent;
+    color: var(--clr);
 }

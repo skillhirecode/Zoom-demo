@@ -1,43 +1,59 @@
-import React, { useState } from 'react';
-import './Login.css'
+import React, { Component } from 'react';
+import './Login.css'; // Import your CSS file
 
+class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: '',
+            password: ''
+        };
+    }
 
-const LoginPage = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+    handleChange = (e) => {
+        const { name, value } = e.target;
+        this.setState({ [name]: value });
+    }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
-  };
+    handleSubmit = (e) => {
+        e.preventDefault();
+        
+    }
 
-  return (
-    <div className="login-page">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  );
-};
+    render() {
+        return (
+            <div className="wrapper" style={{ backgroundImage: "url('/images/loginimg.jpg')", backgroundSize:'cover', backgroundPosition:'center', height:'400px',gap:'30px' }}>
+                <form onSubmit={this.handleSubmit}>
+                    <h1>Login</h1>
+                    <div className="input">
+                        <input
+                            type="text"
+                            placeholder="Username"
+                            name="username"
+                            value={this.state.username}
+                            onChange={this.handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="input">
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            name="password"
+                            value={this.state.password}
+                            onChange={this.handleChange}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="light">Login</button>
+                    <p style={{ marginTop: '10px' }}> 
 
-export default LoginPage;
+                        <a href="#">Sign Up</a>
+                    </p>
+                </form>
+            </div>
+        );
+    }
+}
+
+export default Login;

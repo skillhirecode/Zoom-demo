@@ -7,6 +7,9 @@ import Landing from "./Landing";
 import Videocall from "./Videocall";
 import Dashboard from "./Dashboard";
 import Booking from "./Booking";
+import Userlogin from "./Userlogin";
+import Createmeeting from "./Createmeeting";
+
 
 
 
@@ -36,6 +39,13 @@ function App() {
           <Routes>
             <Route path="/booking" element={<Booking/>} />
           </Routes>
+          <Routes>
+            <Route path="/Userlogin" element={<Userlogin/>}/>
+          </Routes>
+          <Routes>
+            <Route path="/Createmeeting" element={<Createmeeting/>}/>
+          </Routes>
+         
           
         </Router>
       

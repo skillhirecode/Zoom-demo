@@ -1,5 +1,7 @@
 import React from 'react';
 import './Landing.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const Landing = () => {
     return (
@@ -29,6 +31,13 @@ const Landing = () => {
             <div className="animation-container">
                 <h1 className="animation-text">Welcome to SkillZoom</h1>
             </div>
+            {/* <button type="button" class="btn btn-primary">Create meeting</button>
+            <button type="button" class="btn btn-danger">Join meeting</button> */}
+
+            {/* <div className="buttons">
+                    <button className="create-meeting-button">Create Meeting</button>
+                    <button className="join-meeting-button">Join Meeting</button>
+                </div> */}
 
             {/* <div className="container">
                 <img src="https://picsum.photos/id/559/1000/1000.jpg" alt="" />
